@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  movies:
+    image: thisismanjurocks/movies:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+  train:
+    image: thisismanjurocks/train:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
