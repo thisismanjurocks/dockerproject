@@ -1,34 +1,14 @@
-version: '3.8'
+version: "3.8"
 services:
   movies:
     image: thisismanjurocks/paytmmovies:latest
     ports:
-      - "80:80"
-    volumes:
-      - "moviesvol"
+      - 81:80
     deploy:
       replicas: 3
   train:
     image: thisismanjurocks/paytmtrain:latest
     ports:
-      - "81:80"
-    volumes:
-      - "trainvol"
-    deploy:
-      replicas: 3
-  recharge:
-    image: thisismanjurocks/paytmrecharge:latest
-    ports:
-      - "82:80"
-    volumes:
-      - "trainvol"
-    deploy:
-      replicas: 3
-  dth:
-    image: thisismanjurocks/paytmdth:latest
-    ports:
-      - "83:80"
-    volumes:
-      - "dthvol"
+      - 82:80
     deploy:
       replicas: 3
