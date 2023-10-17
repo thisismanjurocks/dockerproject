@@ -3,12 +3,12 @@ services:
   movies:
     image: thisismanjurocks/paytmmovies:latest
     ports:
-      - 81:80
+      - 91:80
     deploy:
       replicas: 3
   train:
     image: thisismanjurocks/paytmtrain:latest
     ports:
-      - 82:80
+      - 92:80
     deploy:
       replicas: 3
